@@ -1,0 +1,18 @@
+[piri.plugins]
+scratchpads = true
+
+[scratchpads.term]
+direction = "fromRight"
+command = "ghostty"
+app_id = "com.mitchellh.ghostty" 
+size = "40% 60%"
+margin = 50
+auto_hide_on_focus_loss = true
+
+[scratchpads.editor]
+direction = "fromLeft" 
+command = "gnome-text-editor"
+app_id = "org.gnome.TextEditor"
+size = "40% 60%"
+margin = 50
+auto_hide_on_focus_loss = true
