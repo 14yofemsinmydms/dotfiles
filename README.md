@@ -2,7 +2,8 @@
 
 My personal Niri and Noctalia configuration. 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f6ce50b1-de0c-46a3-930f-c38a3342c6a0" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b9bb3c2b-cd50-46a6-813c-404468c81dd6" />
+
 
 
 
