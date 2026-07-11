@@ -1,6 +1,4 @@
-// Hi there, these are my niri dots(unorganized btw)
-
-
+spawn-at-startup "/usr/libexec/polkit-mate-authentication-agent-1"
 spawn-at-startup "qs" "-c" "noctalia-shell"
 spawn-at-startup "piri" "daemon"
 include "./noctalia.kdl"
@@ -38,7 +36,7 @@ layer-rule {
 // BLUR
 /* Apps: blur them all without xray for a better look */
 window-rule {
-   opacity 0.85
+   opacity 0.9
    background-effect {
     blur true
     xray false
@@ -46,9 +44,9 @@ window-rule {
 }
 
 blur {
-  passes 5        // more passes = stronger blur (default: 3)
+  passes 4        // more passes = stronger blur (default: 3)
   offset 3.0      // sample distance per pass (default: 3.0)
-  noise 0.03      // grain overlay (default: 0.02)
+  noise 0.02       // grain overlay (default: 0.02)
   saturation 1.0  // color saturation boost (default: 1.5)
 }
 
@@ -57,7 +55,8 @@ blur {
 layer-rule {
   match namespace="^noctalia-(background|launcher-overlay|dock)-.*$"
   background-effect {
-    xray false
+     blur true
+     xray false
   }
 }
 
@@ -88,7 +87,7 @@ window-rule{
     match app-id="come.spotify.Client"
     opacity 0.8
     background-effect {
-    blur true
+    blur false
     xray false
     }
 }
@@ -103,13 +102,23 @@ window-rule {
 // Blur ONLY the launcher
 layer-rule {
     match namespace=r#".*noctalia-launcher-overlay.*"#
-    opacity 0.9
+    // opacity 0.8
     background-effect {
-        blur true
+        blur false
         xray false
         
     }
 }
+
+
+layer-rule {
+    match namespace="quickshell"
+    background-effect {
+    blur true
+    xray false
+    }
+}
+
 input {
     keyboard {
         xkb {
@@ -151,7 +160,7 @@ input {
         // natural-scroll
         accel-profile "flat"
         // scroll-method "no-scroll"
-        accel-speed -0.2
+        
 
    }
 
@@ -333,10 +342,10 @@ layout {
     // Top and bottom struts will simply add outer gaps in addition to the area occupied by
     // layer-shell panels and regular gaps.
     struts {
-        // left 64
-        // right 64
-        // top 64
-        // bottom 64
+         left 24
+         right 24
+         top 8
+         bottom 24
     }
 }
 
@@ -643,7 +652,7 @@ binds {
     // Center all fully visible columns on screen.
     Mod+Ctrl+C { center-visible-columns; }
     Mod+Shift+C {
-        spawn "sh" "-c" "niri msg focused-window | grep -q 'Is floating: yes' && niri msg action set-window-width 1280 && niri msg action set-window-height 720 && niri msg action center-window"
+        spawn "sh" "-c" "niri msg focused-window | grep -q 'Is floating: yes' && niri msg action set-window-width 640 && niri msg action set-window-height 420 && niri msg action center-window"
     }
     Mod+Alt+C {
         spawn "sh" "-c" "niri msg focused-window | grep -q 'Is floating: no' && niri msg action set-column-width \"50%\""
