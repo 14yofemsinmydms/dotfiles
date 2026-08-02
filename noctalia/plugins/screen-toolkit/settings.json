@@ -1,7 +1,5 @@
 {
-  "colorHistory": [
-    "#BEC5E5"
-  ],
+  "colorHistory": [],
   "paletteColors": "",
   "installedLangs": [
     "eng"
@@ -9,7 +7,7 @@
   "transAvailable": false,
   "selectedOcrLang": "eng",
   "screenshotPath": "",
-  "videoPath": "",
+  "videoPath": "~/Videos/ShellRecorder",
   "filenameFormat": "",
   "detectedRecorder": "wf-recorder",
   "recordSkipConfirmation": false,
@@ -28,5 +26,9 @@
   "ocrCapturePath": "",
   "qrResult": "",
   "qrCapturePath": "",
-  "translateResult": ""
+  "translateResult": "",
+  "x02ApiKey": "",
+  "x02Expiry": "7d",
+  "shareSkipPopover": false,
+  "searchEngineUrl": ""
 }

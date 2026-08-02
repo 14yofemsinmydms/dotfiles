@@ -121,8 +121,8 @@ Item {
   readonly property real previewPaneMinWidth: Math.round(240 * Style.uiScaleRatio)
   readonly property real previewPaneMaxWidthCap: Math.round(420 * Style.uiScaleRatio)
 
-  property real contentPreferredWidth: 600 * Style.uiScaleRatio
-  property real contentPreferredHeight: 600 * Style.uiScaleRatio
+  property real contentPreferredWidth: 820 * Style.uiScaleRatio
+  property real contentPreferredHeight: 820 * Style.uiScaleRatio
   readonly property bool allowAttach: true
 
   property string activeTab: "search"

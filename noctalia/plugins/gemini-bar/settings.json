@@ -1,0 +1,7 @@
+{
+  "apiKey": "YOUR_API_KEY_HERE",
+  "model": "gemini-3.6-flash",
+  "systemPrompt": "You are a helpful, concise desktop assistant.",
+  "maxConversations": 20,
+  "maxMessagesPerChat": 100
+}

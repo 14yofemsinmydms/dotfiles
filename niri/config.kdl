@@ -27,6 +27,10 @@ window-rule {
     match app-id="org.gnome.NautilusPreviewer"
     open-floating true
 }
+window-rule {
+    match app-id="^piri-term$"
+    open-floating true
+}
 // Set the overview wallpaper on the backdrop.
 layer-rule {
   match namespace="^noctalia-overview*"
@@ -40,7 +44,7 @@ window-rule {
    background-effect {
     blur true
     xray false
-  }
+    }
 }
 
 blur {
@@ -57,7 +61,7 @@ layer-rule {
   background-effect {
      blur true
      xray false
-  }
+    }
 }
 
 // BLUR FOR GHOSTTY
@@ -83,7 +87,7 @@ window-rule {
         xray false
     }
 }
-window-rule{
+window-rule {
     match app-id="come.spotify.Client"
     opacity 0.8
     background-effect {
@@ -101,12 +105,11 @@ window-rule {
 }
 // Blur ONLY the launcher
 layer-rule {
-    match namespace=r#".*noctalia-launcher-overlay.*"#
+    match namespace=r".*noctalia-launcher-overlay.*"
     // opacity 0.8
     background-effect {
         blur false
         xray false
-        
     }
 }
 
@@ -121,18 +124,8 @@ layer-rule {
 
 input {
     keyboard {
-        xkb {
-            // You can set rules, model, layout, variant and options.
-            // For more information, see xkeyboard-config(7).
+        xkb 
 
-            // For example:
-            // layout "us,ru"
-            // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
-
-            // If this section is empty, niri will fetch xkb settings
-            // from org.freedesktop.locale1. You can control these using
-            // localectl set-x11-keymap.
-        }
 
         // Enable numlock on startup, omitting this setting disables it.
         numlock
@@ -160,20 +153,10 @@ input {
         // natural-scroll
         accel-profile "flat"
         // scroll-method "no-scroll"
-        
-
-   }
-
-    trackpoint {
-        // off
-        // natural-scroll
-        // accel-speed 0.2
-        // accel-profile "flat"
-        // scroll-method "on-button-down"
-        // scroll-button 273
-        // scroll-button-lock
-        // middle-emulation
     }
+
+    trackpoint 
+
 
     // Uncomment this to make the mouse warp to the center of newly focused windows.
     // warp-mouse-to-focus
@@ -212,10 +195,12 @@ layout {
         // Proportion sets the width as a fraction of the output width, taking gaps into account.
         // For example, you can perfectly fit four windows sized "proportion 0.25" on an output.
         // The default preset widths are 1/3, 1/2 and 2/3 of the output.
-        proportion 0.33333
+        proportion 0.333
         proportion 0.5
-        proportion 0.66667
+        proportion 1.0
 
+        
+        
         // Fixed sets the width in logical pixels exactly.
         // fixed 1920
     }
@@ -342,10 +327,10 @@ layout {
     // Top and bottom struts will simply add outer gaps in addition to the area occupied by
     // layer-shell panels and regular gaps.
     struts {
-         left 24
-         right 24
-         top 8
-         bottom 24
+         left 20
+         right 20
+         top 6
+         bottom 20
     }
 }
 
@@ -389,6 +374,22 @@ animations {
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
     slowdown 2
+    window-resize {
+        duration-ms 300
+        curve "cubic-bezier" 0.0 0.0 0.25 1.0
+    }
+    window-open {
+        duration-ms 300
+        curve "cubic-bezier" 0.0 0.0 0.25 0.986
+    }
+    window-close {
+        duration-ms 300
+        curve "cubic-bezier" 0.0 0.0 0.25 1.0
+    }
+    window-movement {
+        duration-ms 300
+        curve "cubic-bezier" 0.0 0.0 0.25 1.0
+    }
 }
 
 // Window rules let you adjust behavior for individual windows.
@@ -401,8 +402,8 @@ window-rule {
     // This regular expression is intentionally made as specific as possible,
     // since this is the default config, and we want no false positives.
     // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
+    match app-id=r"^org\.wezfurlong\.wezterm$"
+    default-column-width 
 }
 
 // Open the Firefox picture-in-picture player as floating by default.
@@ -410,15 +411,15 @@ window-rule {
     // This app-id regular expression will work for both:
     // - host Firefox (app-id is "firefox")
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id=r"firefox$" title="^Picture-in-Picture$"
     open-floating true
 }
 
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
-    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+    match app-id=r"^org\.keepassxc\.KeePassXC$"
+    match app-id=r"^org\.gnome\.World\.Secrets$"
 
     block-out-from "screen-capture"
 
@@ -433,6 +434,7 @@ window-rule {
     clip-to-geometry true
 }	
 binds {
+    Mod+Shift+G { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "plugin:gemini-bar" "toggle"; }
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
     // in the end. To find an XKB name for a particular key, you may use a program
     // like wev.
@@ -462,15 +464,15 @@ binds {
     // "-l 1.0" limits the volume to 100%.
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
-    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
-    XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    XF86AudioMute allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    XF86AudioMicMute allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
     // Example media keys mapping using playerctl.
     // This will work with any MPRIS-enabled media player.
-    XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
-    XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
-    XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
-    XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
+    XF86AudioPlay allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+    XF86AudioStop allow-when-locked=true { spawn-sh "playerctl stop"; }
+    XF86AudioPrev allow-when-locked=true { spawn-sh "playerctl previous"; }
+    XF86AudioNext allow-when-locked=true { spawn-sh "playerctl next"; }
 
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
@@ -719,7 +721,7 @@ binds {
     Alt+F9 { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "plugin:clipboard" "toggle"; }
     Mod+Shift+T { spawn "piri" "scratchpads" "term" "toggle"; }
     Mod+Shift+S { spawn "piri" "scratchpads" "editor" "toggle"; }
-    Mod+Ctrl+P {spawn "qs -c noctalia-shell ipc call plugin:shell-profiles toggle"; }
+    Mod+Ctrl+P { spawn "qs -c noctalia-shell ipc call plugin:shell-profiles toggle"; }
 }
 window-rule {
   // Rounded corners for a modern look.

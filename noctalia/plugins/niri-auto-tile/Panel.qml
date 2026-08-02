@@ -241,8 +241,4 @@ Item {
             }
         }
     }
-IpcHandler {
-    target: "plugin:niri-auto-tile-menu"
-    function toggle() { root.visible = !root.visible }
-  }
 }

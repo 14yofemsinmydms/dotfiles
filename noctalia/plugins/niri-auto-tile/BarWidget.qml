@@ -67,6 +67,17 @@ Item {
         }
     }
 
+    // Status indicator dot
+    Rectangle {
+        anchors.bottom: visualCapsule.bottom
+        anchors.horizontalCenter: visualCapsule.horizontalCenter
+        anchors.bottomMargin: Style.marginXXXS
+        width: Math.round(4 * Style.uiScaleRatio)
+        height: Math.round(4 * Style.uiScaleRatio)
+        radius: Math.round(2 * Style.uiScaleRatio)
+        visible: isEnabled
+        color: isRunning ? Color.mPrimary : Color.mSecondary
+    }
 
     NPopupContextMenu {
         id: contextMenu

@@ -1,0 +1,14 @@
+{
+  "commands": [
+    {
+      "name": "File Manager",
+      "command": "xdg-open ~",
+      "icon": "folder"
+    },
+    {
+      "name": "Fastfetch",
+      "command": "fastfetch",
+      "icon": "sparkles"
+    }
+  ]
+}

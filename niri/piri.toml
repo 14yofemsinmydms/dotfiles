@@ -3,16 +3,18 @@ scratchpads = true
 
 [scratchpads.term]
 direction = "fromRight"
-command = "ghostty"
-app_id = "com.mitchellh.ghostty" 
-size = "40% 60%"
+animation_enabled = false
+command = "kitty --class piri-term"
+app_id = "piri-term" 
+size = "40% 50%"
 margin = 50
 auto_hide_on_focus_loss = true
 
 [scratchpads.editor]
-direction = "fromLeft" 
+direction = "fromLeft"
+animation_enabled = false
 command = "gnome-text-editor"
 app_id = "org.gnome.TextEditor"
-size = "40% 60%"
+size = "40% 50%"
 margin = 50
 auto_hide_on_focus_loss = true
