@@ -152,7 +152,7 @@
                     "panelShowAlbumArt": true,
                     "scrollingMode": "hover",
                     "showAlbumArt": true,
-                    "showArtistFirst": true,
+                    "showArtistFirst": false,
                     "showProgressRing": true,
                     "showVisualizer": false,
                     "textColor": "none",
@@ -161,16 +161,6 @@
                 }
             ],
             "right": [
-                {
-                    "defaultSettings": {
-                        "apiKey": "",
-                        "maxConversations": 20,
-                        "maxMessagesPerChat": 100,
-                        "model": "gemini-2.5-flash",
-                        "systemPrompt": "You are a helpful, concise desktop assistant."
-                    },
-                    "id": "plugin:gemini-bar"
-                },
                 {
                     "hideWhenZero": false,
                     "hideWhenZeroUnread": false,
@@ -351,7 +341,7 @@
                     "stateChecksJson": "[]"
                 },
                 {
-                    "id": "NoctaliaPerformance"
+                    "id": "KeepAwake"
                 }
             ]
         }
@@ -395,11 +385,11 @@
         ],
         "onlySameOutput": true,
         "pinnedApps": [
-            "org.gnome.Nautilus",
-            "app.zen_browser.zen",
             "kitty",
-            "com.spotify.Client",
-            "localsend"
+            "app.zen_browser.zen",
+            "localsend",
+            "org.gnome.Nautilus",
+            "com.spotify.Client"
         ],
         "pinnedStatic": true,
         "position": "bottom",
@@ -465,7 +455,7 @@
         "screenRadiusRatio": 1,
         "shadowDirection": "bottom",
         "shadowOffsetX": 0,
-        "shadowOffsetY": 3,
+        "shadowOffsetY": 4,
         "showChangelogOnStartup": true,
         "showHibernateOnLockScreen": false,
         "showScreenCorners": false,
@@ -681,10 +671,6 @@
     },
     "templates": {
         "activeTemplates": [
-            {
-                "enabled": true,
-                "id": "spicetify"
-            },
             {
                 "enabled": true,
                 "id": "zenBrowser"

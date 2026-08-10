@@ -1,0 +1,124 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "type": "auto",
+    "position": "left",
+    "printRemaining": true,
+    "padding": {
+      "top": 0,
+      "left": 0,
+      "right": 4
+    },
+    "color": {
+      "1": "#63c6df",
+      "2": "#63c6d1"
+    }
+  },
+  "display": {
+    "separator": " ▸ ",
+    "color": {
+      "separator": "light_black",
+      "keys": "#bec6df",
+      "title": "#c4c6d1"
+    },
+    "percent": {
+      "color": {
+        "green": "#dcbed3",
+        "yellow": "#bec6df",
+        "red": "#ffb4ab"
+      }
+    }
+  },
+  "modules": [
+    "break",
+    {
+      "type": "title",
+      "color": {
+        "user": "light_cyan",
+        "at": "light_red",
+        "host": "light_magenta"
+      }
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m┌──────────────────────────────────────────────────┐"
+    },
+    "break",
+    {
+      "type": "os",
+      "key": "  os      ",
+      "keyColor": "red",
+      "format": "{name} {version-id}"
+    },
+    {
+      "type": "kernel",
+      "key": "  kernel  ",
+      "keyColor": "red",
+      "format": "{release}"
+    },
+    {
+      "type": "wm",
+      "key": "  wm      ",
+      "keyColor": "green",
+      "format": "{pretty-name} ({protocol-name})"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[90m├──────────────────────────────────────────────────┤"
+    },
+    "break",
+    {
+      "type": "memory",
+      "key": "  ram     ",
+      "keyColor": "blue",
+      "format": "{used} / {total} ({percentage})"
+    },
+    {
+      "type": "cpu",
+      "key": "  cpu     ",
+      "keyColor": "blue",
+      "format": "{name}"
+    },
+    {
+      "type": "gpu",
+      "key": "  gpu     ",
+      "keyColor": "magenta",
+      "format": "{name}"
+    },
+    {
+      "type": "disk",
+      "key": "  disk    ",
+      "keyColor": "red",
+      "format": "{size-used} / {size-total} ({size-percentage})"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[90m├──────────────────────────────────────────────────┤"
+    },
+    "break",
+    {
+      "type": "uptime",
+      "key": "  uptime  ",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "terminal",
+      "key": "  terminal",
+      "keyColor": "yellow",
+      "format": "{pretty-name}"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[90m└──────────────────────────────────────────────────┘"
+    },
+    "break",
+    {
+      "type": "colors",
+      "symbol": "circle"
+    },
+    "break"
+  ]
+}
