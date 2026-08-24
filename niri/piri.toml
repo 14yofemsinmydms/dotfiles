@@ -4,8 +4,8 @@ scratchpads = true
 [scratchpads.term]
 direction = "fromRight"
 animation_enabled = false
-command = "kitty --class piri-term"
-app_id = "piri-term" 
+command = "kitty"
+app_id = "kitty" 
 size = "40% 50%"
 margin = 50
 auto_hide_on_focus_loss = true
@@ -17,4 +17,14 @@ command = "gnome-text-editor"
 app_id = "org.gnome.TextEditor"
 size = "40% 50%"
 margin = 50
+auto_hide_on_focus_loss = true
+
+[scratchpads.pip]
+direction = "fromRight"
+animation_enabled = false
+command = ""
+app_id = ".*zen.*|.*firefox.*"
+title = ".*Picture-in-Picture.*"
+size = "40% 40%"
+margin = 30
 auto_hide_on_focus_loss = true

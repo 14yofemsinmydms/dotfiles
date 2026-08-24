@@ -120,6 +120,7 @@ Item {
   function triggerFindMyPhone(deviceId) { _activate(deviceId, "findmyphone.ring") }
   function pingDevice(deviceId)         { _activate(deviceId, "ping.ping") }
   function browseFiles(deviceId)        { _activate(deviceId, "sftp.browse") }
+  function syncClipboard(deviceId)      { _activate(deviceId, "clipboard.push") }
   function requestPairing(deviceId)     { _activate(deviceId, "pair"); Qt.callLater(refreshDevices) }
   function unpairDevice(deviceId)       { _activate(deviceId, "unpair"); Qt.callLater(refreshDevices) }
 

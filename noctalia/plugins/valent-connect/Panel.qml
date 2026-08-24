@@ -238,6 +238,12 @@ Item {
               }
 
               NIconButton {
+                icon: "clipboard"
+                tooltipText: "Sync Clipboard"
+                onClicked: main.syncClipboard(main.mainDevice.id)
+              }
+
+              NIconButton {
                 icon: "radar"
                 tooltipText: pluginApi?.tr("panel.find-device")
                 onClicked: main.triggerFindMyPhone(main.mainDevice.id)

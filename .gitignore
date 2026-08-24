@@ -2,3 +2,11 @@
 *.bak
 *.log
 *.qslog
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.mp4
+*.mkv
+!noctalia/plugins/**/preview.png
+!noctalia/plugins/**/demo.gif

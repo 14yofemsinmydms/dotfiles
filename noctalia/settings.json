@@ -44,6 +44,10 @@
         "autoShowDelay": 150,
         "backgroundOpacity": 0.93,
         "barType": "floating",
+        "borderColorKey": "primary",
+        "borderEnabled": true,
+        "borderOpacity": 0.5,
+        "borderThickness": 5,
         "capsuleColorKey": "none",
         "capsuleOpacity": 1,
         "contentPadding": 2,
@@ -55,7 +59,7 @@
         "frameThickness": 8,
         "hideOnOverview": false,
         "marginHorizontal": 475,
-        "marginVertical": 8,
+        "marginVertical": 10,
         "middleClickAction": "none",
         "middleClickCommand": "",
         "middleClickFollowMouse": false,
@@ -75,9 +79,18 @@
         "showOnWorkspaceSwitch": true,
         "showOutline": false,
         "useSeparateOpacity": false,
-        "widgetSpacing": 12,
+        "widgetSpacing": 10,
         "widgets": {
             "center": [
+                {
+                    "clockColor": "none",
+                    "customFont": "Sans Serif",
+                    "formatHorizontal": "hh:mm AP ddd, MMM dd",
+                    "formatVertical": "hh mm AP - dd MM",
+                    "id": "Clock",
+                    "tooltipFormat": "hh:mm AP ddd, MMM dd",
+                    "useCustomFont": false
+                },
                 {
                     "blacklist": [
                     ],
@@ -88,15 +101,6 @@
                     "id": "Tray",
                     "pinned": [
                     ]
-                },
-                {
-                    "clockColor": "none",
-                    "customFont": "Montserrat Thin",
-                    "formatHorizontal": "hh:mm AP ddd, MMM dd",
-                    "formatVertical": "hh mm AP - dd MM",
-                    "id": "Clock",
-                    "tooltipFormat": "hh:mm AP ddd, MMM dd",
-                    "useCustomFont": false
                 }
             ],
             "left": [
@@ -210,7 +214,7 @@
                     "textColor": "none"
                 },
                 {
-                    "displayMode": "onhover",
+                    "displayMode": "alwaysHide",
                     "iconColor": "none",
                     "id": "Network",
                     "textColor": "none"
@@ -388,8 +392,8 @@
             "org.gnome.Nautilus",
             "app.zen_browser.zen",
             "kitty",
-            "localsend",
-            "spotify-launcher"
+            "spotify-launcher",
+            "code"
         ],
         "pinnedStatic": true,
         "position": "bottom",
@@ -404,7 +408,7 @@
         "animationDisabled": false,
         "animationSpeed": 0.5,
         "autoStartAuth": false,
-        "avatarImage": "/home/lwk3yhighoncaffeine/Downloads/Temporary/coolpfp.jpg",
+        "avatarImage": "/home/14yofemsinmydms/Downloads/Temporary/coolpfp.jpg",
         "boxRadiusRatio": 1,
         "clockFormat": "hh:mm AP",
         "clockStyle": "custom",
@@ -453,11 +457,11 @@
         "reverseScroll": false,
         "scaleRatio": 0.8500000000000001,
         "screenRadiusRatio": 1,
-        "shadowBlurMax": 40,
+        "shadowBlurMax": 60,
         "shadowDirection": "custom",
         "shadowIntensity": 1,
         "shadowOffsetX": 0,
-        "shadowOffsetY": 6,
+        "shadowOffsetY": 8,
         "shadowScale": 1,
         "showChangelogOnStartup": true,
         "showHibernateOnLockScreen": false,
@@ -494,11 +498,11 @@
     },
     "location": {
         "analogClockInCalendar": true,
-        "autoLocate": false,
+        "autoLocate": true,
         "firstDayOfWeek": -1,
         "hideWeatherCityName": true,
         "hideWeatherTimezone": false,
-        "name": "katihar,bihar,india",
+        "name": "",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
         "showWeekNumberInCalendar": true,
@@ -516,7 +520,7 @@
         "bluetoothRssiPollingEnabled": false,
         "disableDiscoverability": false,
         "networkPanelView": "wifi",
-        "wifiDetailsViewMode": "grid"
+        "wifiDetailsViewMode": "list"
     },
     "nightLight": {
         "autoSchedule": true,
@@ -533,6 +537,10 @@
     },
     "notifications": {
         "backgroundOpacity": 0.9,
+        "borderColorKey": "primary",
+        "borderEnabled": true,
+        "borderOpacity": 0.25,
+        "borderThickness": 2,
         "clearDismissed": true,
         "criticalUrgencyDuration": 5,
         "density": "default",
@@ -693,18 +701,6 @@
             {
                 "enabled": true,
                 "id": "kitty"
-            },
-            {
-                "enabled": true,
-                "id": "discord"
-            },
-            {
-                "enabled": true,
-                "id": "steam"
-            },
-            {
-                "enabled": true,
-                "id": "spicetify"
             }
         ],
         "enableUserTheming": false
@@ -715,7 +711,7 @@
         "fontDefaultScale": 1,
         "fontFixed": "monospace",
         "fontFixedScale": 1,
-        "panelBackgroundOpacity": 0.93,
+        "panelBackgroundOpacity": 1,
         "panelsAttachedToBar": true,
         "scrollbarAlwaysVisible": false,
         "settingsPanelMode": "attached",
@@ -725,7 +721,7 @@
     },
     "wallpaper": {
         "automationEnabled": false,
-        "directory": "/home/lwk3yhighoncaffeine/Downloads/Customization/Wallpapers",
+        "directory": "/home/14yofemsinmydms/Downloads/Customization/Wallpapers",
         "enableMultiMonitorDirectories": true,
         "enabled": true,
         "favorites": [
