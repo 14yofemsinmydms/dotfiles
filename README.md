@@ -1,12 +1,11 @@
-# ✨ Anshu's Dotfiles
+## my dots :D
 
-> Personal configuration files celebrating 1 year on Linux (Fedora + Niri + Noctalia + Spicetify).
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f83bcd84-78c2-4ec3-8daa-7c772e658836" />
 
-<div align="center">
-  <img width="1920" height="1080" alt="Desktop Preview" src="https://github.com/user-attachments/assets/2e922772-b267-43de-bcfa-43ba076cd8ed" />
-</div>
 
 <br/>
+
+
 
 ## 🖥️ System Overview
 
@@ -14,21 +13,21 @@
 | :--- | :--- |
 | **OS** | [Fedora Linux](https://fedoraproject.org/) (Workstation) |
 | **Compositor** | [Niri](https://github.com/YaLTeR/niri) (Scrollable-tiling Wayland compositor) |
-| **Desktop Shell** | [Noctalia Shell](https://github.com/noctalia-dev/noctalia-shell) (powered by Quickshell) |
+| **Desktop Shell** | [Noctalia v4](https://docs.noctalia.dev/noctalia-shell) (Quickshell) |
 | **Terminal** | [Kitty](https://sw.kovidgoyal.net/kitty/) |
 | **Music Player** | [Spotify](https://www.spotify.com/) + [Spicetify](https://spicetify.app/) |
 | **System Fetch** | [Fastfetch](https://github.com/fastfetch-cli/fastfetch) |
 | **Scratchpad Manager** | [Piri](https://github.com/Asthestarsfalll/piri) |
-| **App Launcher** | Quickshell Launcher / Fuzzel |
+| **App Launcher** | Noctalia default |
 
 ---
 
 ## 📂 Included Configurations
 
-* **`niri/`** — Tiling layouts, custom animations, gesture support, scratchpad integration, and backdrop rules.
-* **`noctalia/`** — Noctalia shell configuration, colorscheme tokens, custom plugins (`clipboard`, `music-search`, `wallcards`, `shell-profiles`, `screen-toolkit`, etc.).
-* **`spicetify/`** — Spicetify theme styling (`lucid`, `Comfy`, marketplace configs).
-* **`fastfetch/`** — Custom structured ASCII banner and themed specs box.
+* **`niri`** — Tiling layouts, custom animations, gesture support, scratchpad integration, and backdrop rules.
+* **`noctalia`** — Noctalia shell configuration infused with custom shadow and border settings. [yes i still use v4]
+* **`spicetify`** — Spicetify theme styling (`lucid`, `Comfy`, marketplace configs).
+* **`fastfetch`** — Custom structured ASCII banner and themed specs box.
 
 ---
 
@@ -85,7 +84,7 @@ sudo dnf install fastfetch kitty
 
 ---
 
-## ⌨️ Useful Keybindings Cheat Sheet
+## ⌨️ My top 10 keybinds -
 
 | Keybinding | Action |
 | :--- | :--- |
@@ -109,6 +108,5 @@ sudo dnf install fastfetch kitty
 
 ---
 
-<div align="center">
-  <sub>Crafted with ❤️ on Fedora Linux</sub>
-</div>
+
+> note- i ai generated this readme file... :D
